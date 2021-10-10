@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  web:
+    image: leelakarthik/ant-chat:latest
+    ports:
+      - 3000:3000
+    volumes:
+      - ./app/
+    depends_on:
+      - socket
+  socket:
+    image: leelakarthik/socket-server:latest
+    ports:
+      - 3001:3001
+    volumes:
+      - ./app/
+      
