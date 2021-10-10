@@ -6,7 +6,7 @@ import Form from "./components/form";
 import Modal from "./Modal";
 // import { getMsgs } from "./service";
 
-const connection = io.connect("http://localhost:3001");
+const connection = io.connect("https://express-ant-server.herokuapp.com");
 connection.on("welcome", (data) => {
   console.log("welcome user " + data);
 });
